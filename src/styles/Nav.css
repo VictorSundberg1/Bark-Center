@@ -1,0 +1,40 @@
+.nav {
+	display: flex;
+	gap: 12px;
+	margin-bottom: 16px;
+	background-color: #2e2e2e;
+	padding: 10px;
+}
+
+.nav a {
+	text-decoration: none;
+	padding: 6px 10px;
+	border-radius: 8px;
+	color: white;
+	font-size: var(--font-size-lg);
+	font-weight: 500;
+	transition: 0.5s;
+}
+.nav a:hover {
+	font-size: var(--font-size-xl);
+	background: none;
+	cursor: pointer;
+}
+
+.nav a:active {
+	text-decoration: underline;
+	color: white;
+}
+
+.title {
+	text-decoration: none;
+	padding: 6px 10px;
+	border-radius: 8px;
+	color: white;
+	font-size: var(--font-size-xl);
+	font-weight: 600;
+}
+
+.title .center {
+	color: rgb(83, 83, 255);
+}
