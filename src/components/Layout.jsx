@@ -6,12 +6,14 @@ export default function Layout() {
 	return (
 		<main className="conatiner">
 			<nav className="nav">
-				<span className="title">
-					Bark{' '}
-					<span className="center">
-						Center <PawPrint />
+				<NavLink to="/">
+					<span className="title">
+						Bark{' '}
+						<span className="center">
+							Center <PawPrint />
+						</span>
 					</span>
-				</span>
+				</NavLink>
 				<NavLink to="/" end>
 					Home
 				</NavLink>
