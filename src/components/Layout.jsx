@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from 'react-router';
 import '../styles/Nav.css';
+import '../styles/Animations.css';
 import { PawPrint } from 'lucide-react';
 
 export default function Layout() {
