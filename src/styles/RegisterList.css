@@ -9,6 +9,9 @@
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 8px;
 }
+.dogCards h2 {
+	font-size: var(--font-size-3xl);
+}
 .dogCards li {
 	background: #fff;
 	border: 1px solid #eee;

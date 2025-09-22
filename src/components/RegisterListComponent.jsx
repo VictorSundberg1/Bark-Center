@@ -31,7 +31,7 @@ export default function RegisterListComponent() {
 
 	return (
 		<section className="dogCards">
-			<h3>Registered dogs</h3>
+			<h2>Registered dogs</h2>
 			<ul>
 				{dogs.map((dog, index) => {
 					const name = dog.name;
