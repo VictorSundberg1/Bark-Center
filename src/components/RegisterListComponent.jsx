@@ -54,12 +54,5 @@ export default function RegisterListComponent() {
 				})}
 			</ul>
 		</section>
-
-		// <ul>
-		// 	{dogs.map((d, i) => (
-		// 		<li key={d.chipNumber ?? i}>{d.name}</li>
-		// {img && <img src={img} alt={name} />}
-		// 	))}
-		// </ul>
 	);
 }
