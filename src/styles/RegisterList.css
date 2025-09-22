@@ -1,0 +1,45 @@
+.dogCards {
+	margin-top: 16px;
+}
+.dogCards ul {
+	list-style: none;
+	padding: 0;
+	margin: 8px 0 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 8px;
+}
+.dogCards li {
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: 12px;
+	padding: 20px;
+	display: grid;
+	grid-template-columns: auto auto 1fr;
+	align-items: center;
+	gap: 8px;
+}
+.dogCards .name {
+	font-weight: 600;
+	font-size: var(--font-size-xl);
+	color: black;
+	text-transform: capitalize;
+}
+.dogCards .chipNumber {
+	grid-column: 1 / -1;
+	font-weight: 500;
+	color: #555;
+	text-transform: capitalize;
+}
+.dogCards .sex-icon {
+	color: black;
+	display: flex;
+	align-items: center;
+}
+.dogCards img {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid #555;
+}

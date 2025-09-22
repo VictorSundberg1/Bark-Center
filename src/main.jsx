@@ -4,6 +4,7 @@ import { createHashRouter, RouterProvider } from 'react-router';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import CatalogPage from './pages/CatalogPage';
+import InfoPage from './pages/InfoPage';
 import './styles/App.css';
 
 const router = createHashRouter([
@@ -18,6 +19,10 @@ const router = createHashRouter([
 			{
 				path: 'catalog',
 				element: <CatalogPage />,
+			},
+			{
+				path: 'info/:chipNumber',
+				element: <InfoPage />,
 			},
 		],
 	},

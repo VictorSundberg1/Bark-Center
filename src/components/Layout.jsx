@@ -4,7 +4,7 @@ import { PawPrint } from 'lucide-react';
 
 export default function Layout() {
 	return (
-		<main className="conatiner">
+		<main>
 			<nav className="nav">
 				<NavLink to="/">
 					<span className="title">
@@ -19,7 +19,9 @@ export default function Layout() {
 				</NavLink>
 				<NavLink to="/catalog">Catalog</NavLink>
 			</nav>
-			<Outlet />
+			<div className="container">
+				<Outlet />
+			</div>
 		</main>
 	);
 }
