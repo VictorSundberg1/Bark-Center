@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router';
 import InfoCard from '../components/InfoCard';
 import { Activity, ArrowBigLeft, Hash, Info, Mars, Venus } from 'lucide-react';
 import '../styles/InfoPage.css';
+import defaultDogImage from '/default-dog.svg';
 
 const BIN_ID = import.meta.env.VITE_JSONBIN_ID;
 
@@ -42,9 +43,9 @@ export default function InfoPage() {
 					<ArrowBigLeft size={30} className="back_arrow" />
 				</Link>
 				<img
-					src={dog.img || '/default-dog.svg'}
+					src={dog.img || defaultDogImage}
 					alt={dog.name}
-					onError={(e) => (e.target.src = '/default-dog.svg')}
+					onError={(e) => (e.target.src = defaultDogImage)}
 					className="dog_main_image"
 				/>
 				<h1>{dog.name}</h1>
