@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import InfoCard from '../components/InfoCard';
-import { Activity, Hash, Info, Mars, Venus } from 'lucide-react';
+import { Activity, ArrowBigLeft, Hash, Info, Mars, Venus } from 'lucide-react';
 import '../styles/InfoPage.css';
 
 const BIN_ID = import.meta.env.VITE_JSONBIN_ID;
@@ -37,7 +37,10 @@ export default function InfoPage() {
 
 	return (
 		<div className="dog_info_page">
-			<div className="dog_main_card">
+			<div className="dog_main_card scale-in-center">
+				<Link to="/catalog">
+					<ArrowBigLeft size={30} className="back_arrow" />
+				</Link>
 				<img
 					src={dog.img || '/default-dog.svg'}
 					alt={dog.name}
@@ -47,7 +50,7 @@ export default function InfoPage() {
 				<h1>{dog.name}</h1>
 			</div>
 
-			<div className="dog_info_grid">
+			<div className="dog_info_grid scale-in-center3">
 				<InfoCard
 					title="Sex"
 					value={dog.sex === 'female' ? 'Female' : 'Male'}

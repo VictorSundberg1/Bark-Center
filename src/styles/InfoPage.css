@@ -5,6 +5,12 @@
 	gap: 8px;
 }
 
+.back_arrow {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
 .dog_main_card {
 	background: white;
 	border-radius: 16px;
