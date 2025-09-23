@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import InfoCard from '../components/InfoCard';
+import { Activity, Hash, Info, Mars, Venus } from 'lucide-react';
+import '../styles/InfoPage.css';
 
 const BIN_ID = import.meta.env.VITE_JSONBIN_ID;
 
@@ -33,9 +36,41 @@ export default function InfoPage() {
 	if (!dog) return <p>No dog with {chipNumber} chipnumber found</p>;
 
 	return (
-		<div>
-			<h1>{dog.name}</h1>
-			<h2>{dog.sex}</h2>
+		<div className="dog_info_page">
+			<div className="dog_main_card">
+				<img
+					src={dog.img || '/default-dog.svg'}
+					alt={dog.name}
+					onError={(e) => (e.target.src = '/default-dog.svg')}
+					className="dog_main_image"
+				/>
+				<h1>{dog.name}</h1>
+			</div>
+
+			<div className="dog_info_grid">
+				<InfoCard
+					title="Sex"
+					value={dog.sex === 'female' ? 'Female' : 'Male'}
+					icon={dog.sex === 'female' ? <Venus size={20} /> : <Mars size={20} />}
+				/>
+				<InfoCard
+					title="Chip Number"
+					value={dog.chipNumber}
+					icon={<Hash size={20} />}
+				/>
+				<InfoCard
+					title="Status"
+					value={dog.present ? 'Active' : 'Not Active'}
+					icon={<Activity size={20} />}
+				/>
+				<InfoCard title="Breed" value={dog.breed} icon={<Info />} />
+				<InfoCard title="Age" value={`${dog.age} Years Old`} icon={<Info />} />
+				<InfoCard
+					title="Owner"
+					value={`${dog.owner.name} ${dog.owner.lastName} ${dog.owner.phoneNumber}`}
+					icon={<Info />}
+				/>
+			</div>
 		</div>
 	);
 }

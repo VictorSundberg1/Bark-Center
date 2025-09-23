@@ -1,0 +1,79 @@
+.dog_info_page {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	gap: 8px;
+}
+
+.dog_main_card {
+	background: white;
+	border-radius: 16px;
+	padding: 18px;
+	text-align: center;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+	margin-bottom: 24px;
+}
+
+.dog_main_image {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 16px;
+	border: 3px solid #b2bdf6;
+}
+
+.dog_main_card h1 {
+	margin: 0;
+	font-size: var(--font-size-4xl);
+	color: #1f2937;
+	font-weight: 600;
+}
+
+.dog_info_grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 16px;
+}
+
+.dog_info_card {
+	background: white;
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease;
+}
+
+.dog_info_card:hover {
+	transform: translateY(-2px);
+}
+
+.dog_card_header {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 8px;
+}
+
+.dog_card_icon {
+	color: #6366f1;
+	display: flex;
+	align-items: center;
+}
+
+.dog_card_title {
+	font-size: var(--font-size-base);
+	color: #6b7280;
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+}
+
+.dog_info_card_value {
+	font-size: var(--font-size-xl);
+	font-weight: 600;
+	color: #1f2937;
+	margin: 0;
+	text-transform: capitalize;
+}
