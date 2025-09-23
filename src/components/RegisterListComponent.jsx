@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import '../styles/RegisterList.css';
 import { Link } from 'react-router';
-import { Venus, Mars, Dot } from 'lucide-react';
+import { Venus, Mars } from 'lucide-react';
+import defaultDogImage from '/default-dog.svg';
 
 const BIN_ID = import.meta.env.VITE_JSONBIN_ID;
 
@@ -43,10 +44,10 @@ export default function RegisterListComponent() {
 								<span>
 									{img && (
 										<img
-											src={img || '/default-dog.svg'}
+											src={img || defaultDogImage}
 											alt={name}
 											onError={(e) => {
-												e.target.src = '/default-dog.svg';
+												e.target.src = defaultDogImage;
 											}}
 										/>
 									)}
