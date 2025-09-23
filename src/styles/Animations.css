@@ -81,6 +81,7 @@
 	}
 }
 
+/* Scale in from center */
 @-webkit-keyframes scale-in-center {
 	0% {
 		-webkit-transform: scale(0);

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../styles/RegisterList.css';
 import { Link } from 'react-router';
-import { Venus, Mars } from 'lucide-react';
+import { Venus, Mars, Dot } from 'lucide-react';
 
 const BIN_ID = import.meta.env.VITE_JSONBIN_ID;
 
@@ -11,19 +11,12 @@ export default function RegisterListComponent() {
 
 	useEffect(() => {
 		fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`)
-			.then(async (res) => {
-				if (!res.ok) throw new Error(`HTTP ${res.status}`);
-				const json = await res.json();
-
-				let list = [];
-				if (json && Array.isArray(json.record)) {
-					list = json.record;
-				} else {
-					list = [];
-				}
-
-				setDogs(list);
-			})
+			.then((response) =>
+				response.ok
+					? response.json()
+					: Promise.reject(`HTTP ${response.status}`)
+			)
+			.then((json) => setDogs(json.record || []))
 			.catch(setError);
 	}, []);
 
@@ -38,6 +31,7 @@ export default function RegisterListComponent() {
 					const chipNumber = dog.chipNumber;
 					const sex = dog.sex;
 					const img = dog.img;
+					const present = dog.present;
 					return (
 						<Link to={`/info/${chipNumber}`}>
 							<li key={dog.chipNumber ?? index}>
@@ -46,8 +40,21 @@ export default function RegisterListComponent() {
 									{sex === 'female' && <Venus size={20} />}
 									{sex === 'male' && <Mars size={20} />}
 								</span>
-								<span>{img && <img src={img} alt={name} />}</span>
+								<span>
+									{img && (
+										<img
+											src={img || '/default-dog.svg'}
+											alt={name}
+											onError={(e) => {
+												e.target.src = '/default-dog.svg';
+											}}
+										/>
+									)}
+								</span>
 								<span className="chipNumber">Chip: {chipNumber}</span>
+								<span className="isPresent">
+									{present ? 'Active' : 'Not Active'}
+								</span>
 							</li>
 						</Link>
 					);
