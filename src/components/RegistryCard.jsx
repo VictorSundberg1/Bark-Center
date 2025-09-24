@@ -25,7 +25,7 @@ function RegistryCard({ dog }) {
 					)}
 				</span>
 				<span className="chipNumber">Chip: {chipNumber}</span>
-				<span className="isPresent">{present ? 'Active' : 'Not Active'}</span>
+				<span className="isPresent">{present ? 'Present' : 'Not Present'}</span>
 			</li>
 		</Link>
 	);
