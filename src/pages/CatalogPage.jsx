@@ -23,7 +23,10 @@ export default function CatalogPage() {
 
 	return (
 		<section className="dogCards">
-			<h2>Registered dogs</h2>
+			<div className="registry_main_card scale-in-center">
+				<h1>All Registered Dogs</h1>
+				<p>Click on a card to see more information from a registered dog🐶</p>
+			</div>
 			<ul>
 				{dogs.map((dog, index) => (
 					<RegistryCard key={dog.chipNumber ?? index} dog={dog} />

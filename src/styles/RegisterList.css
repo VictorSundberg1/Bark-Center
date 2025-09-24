@@ -54,3 +54,24 @@
 	object-fit: cover;
 	border: 2px solid #555;
 }
+
+.registry_main_card {
+	background: white;
+	border-radius: 16px;
+	padding: 18px;
+	text-align: center;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+	margin-bottom: 24px;
+}
+.registry_main_card h1 {
+	margin: 0;
+	font-size: var(--font-size-4xl);
+	color: #1f2937;
+	font-weight: 700;
+}
+.registry_main_card p {
+	color: #555;
+	opacity: 0.9;
+	font-size: var(--font-size-xl);
+	font-weight: 500;
+}
