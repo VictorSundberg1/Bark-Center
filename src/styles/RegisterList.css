@@ -21,6 +21,10 @@
 	grid-template-columns: auto auto 1fr;
 	align-items: center;
 	gap: 8px;
+	transition: transform 0.2s ease;
+}
+.dogCards li:hover {
+	transform: translateY(-2px);
 }
 .dogCards .name {
 	font-weight: 600;
