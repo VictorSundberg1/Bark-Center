@@ -39,11 +39,9 @@
 	color: #555;
 	text-transform: capitalize;
 }
-
 .dogCards .sex-icon {
 	color: black;
 }
-
 .dogCards .isPresent {
 	color: black;
 	text-decoration: none;
@@ -56,6 +54,7 @@
 	border: 2px solid #555;
 }
 
+/* Main / Header Card */
 .registry_main_card {
 	background: white;
 	border-radius: 16px;
@@ -76,6 +75,15 @@
 	font-size: var(--font-size-xl);
 	font-weight: 500;
 }
+
+/* Filter functions */
+.filter_functions {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 20px;
+}
+
 .show_present_dogs_btn {
 	padding: 10px 12px;
 	border: 1px solid #d8d8d8;
@@ -85,7 +93,15 @@
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 	transition: transform 0.2s ease;
 }
+
 .show_present_dogs_btn:hover {
 	transform: translateY(-2px);
 	cursor: pointer;
+}
+
+.search input {
+	padding: 10px 12px;
+	border: 1px solid #d8d8d8;
+	background: white;
+	border-radius: 12px;
 }
