@@ -64,7 +64,7 @@ export default function InfoPage() {
 				/>
 				<InfoCard
 					title="Status"
-					value={dog.present ? 'Active' : 'Not Active'}
+					value={dog.present ? 'Present' : 'Not Present'}
 					icon={<Activity size={20} />}
 				/>
 				<InfoCard title="Breed" value={dog.breed} icon={<Info />} />
