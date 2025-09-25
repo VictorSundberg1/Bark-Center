@@ -38,3 +38,12 @@
 .title .center {
 	color: rgb(83, 83, 255);
 }
+
+@media (max-width: 450px) {
+	.title {
+		padding: 0px;
+	}
+	.nav a {
+		padding: 6px 0px;
+	}
+}

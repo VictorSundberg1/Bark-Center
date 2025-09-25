@@ -105,3 +105,13 @@
 	background: white;
 	border-radius: 12px;
 }
+
+@media (max-width: 450px) {
+	.filter_functions {
+		flex-direction: column;
+	}
+	.search input {
+		width: 100%;
+		text-align: center;
+	}
+}
