@@ -39,7 +39,7 @@ export default function InfoPage() {
 	return (
 		<div className="dog_info_page">
 			<div className="dog_main_card scale-in-center">
-				<Link to="/catalog">
+				<Link to="/registry">
 					<ArrowBigLeft size={30} className="back_arrow" />
 				</Link>
 				<img

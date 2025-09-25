@@ -17,7 +17,7 @@ const router = createHashRouter([
 				element: <HomePage />,
 			},
 			{
-				path: 'catalog',
+				path: 'registry',
 				element: <CatalogPage />,
 			},
 			{
