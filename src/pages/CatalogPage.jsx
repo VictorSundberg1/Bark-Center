@@ -10,7 +10,7 @@ export default function CatalogPage() {
 	const [showPresent, setShowPresent] = useState(false);
 	const [search, setSearch] = useState('');
 
-	//Get all dogs from JsonBin and add to Array of dogs if successfull
+	//Get all dogs from JsonBin and add to Array of dogs if successfull else set error and return error.message
 	useEffect(() => {
 		fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`)
 			.then((response) =>
