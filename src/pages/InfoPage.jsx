@@ -15,9 +15,9 @@ export default function InfoPage() {
 
 	useEffect(() => {
 		fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`)
-			.then(async (res) => {
-				if (!res.ok) throw new Error(`HTTP ${res.status}`);
-				const json = await res.json();
+			.then(async (response) => {
+				if (!response.ok) throw new Error(`HTTP ${response.status}`);
+				const json = await response.json();
 
 				const choosenDog = json.record?.find(
 					(dog) => dog.chipNumber === chipNumber
@@ -39,7 +39,7 @@ export default function InfoPage() {
 	return (
 		<div className="dog_info_page">
 			<div className="dog_main_card scale-in-center">
-				<Link to="/catalog">
+				<Link to="/registry">
 					<ArrowBigLeft size={30} className="back_arrow" />
 				</Link>
 				<img

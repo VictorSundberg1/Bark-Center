@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { createHashRouter, RouterProvider } from 'react-router';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
-import CatalogPage from './pages/CatalogPage';
+import RegistryPage from './pages/RegistryPage';
 import InfoPage from './pages/InfoPage';
 import './styles/App.css';
 
@@ -17,8 +17,8 @@ const router = createHashRouter([
 				element: <HomePage />,
 			},
 			{
-				path: 'catalog',
-				element: <CatalogPage />,
+				path: 'registry',
+				element: <RegistryPage />,
 			},
 			{
 				path: 'info/:chipNumber',

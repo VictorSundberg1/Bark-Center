@@ -18,7 +18,7 @@ export default function Layout() {
 				<NavLink to="/" end>
 					Home
 				</NavLink>
-				<NavLink to="/catalog">Catalog</NavLink>
+				<NavLink to="/registry">Registry</NavLink>
 			</nav>
 			<div className="container">
 				<Outlet />
