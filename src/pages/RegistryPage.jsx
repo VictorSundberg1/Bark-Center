@@ -4,7 +4,7 @@ import RegistryCard from '../components/RegistryCard';
 
 const BIN_ID = import.meta.env.VITE_JSONBIN_ID;
 
-export default function CatalogPage() {
+export default function RegistryPage() {
 	const [dogs, setDogs] = useState([]);
 	const [error, setError] = useState(null);
 	const [showPresent, setShowPresent] = useState(false);
