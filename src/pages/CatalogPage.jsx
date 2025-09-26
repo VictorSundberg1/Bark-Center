@@ -13,13 +13,15 @@ export default function CatalogPage() {
 	//Get all dogs from JsonBin and add to Array of dogs if successfull else set error and return error.message
 	useEffect(() => {
 		fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`)
-			.then((response) =>
-				response.ok
-					? response.json()
-					: Promise.reject(`HTTP ${response.status}`)
-			)
-			.then((json) => setDogs(json.record || []))
-			.catch(setError);
+			.then(async (response) => {
+				if (!response.ok) throw new Error(`HTTP ${response.status}`);
+				const json = await response.json();
+
+				setDogs(json.record || []);
+			})
+			.catch((err) => {
+				setError(err);
+			});
 	}, []);
 
 	if (error) return <p>Fel: {String(error.message ?? error)}</p>;

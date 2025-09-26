@@ -15,9 +15,9 @@ export default function InfoPage() {
 
 	useEffect(() => {
 		fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`)
-			.then(async (res) => {
-				if (!res.ok) throw new Error(`HTTP ${res.status}`);
-				const json = await res.json();
+			.then(async (response) => {
+				if (!response.ok) throw new Error(`HTTP ${response.status}`);
+				const json = await response.json();
 
 				const choosenDog = json.record?.find(
 					(dog) => dog.chipNumber === chipNumber
